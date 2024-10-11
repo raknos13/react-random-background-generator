@@ -38,7 +38,12 @@ export default function App() {
       className="flex items-center justify-center h-screen p-5 duration-500"
     >
       <div className="bg-gray-300 p-4 flex flex-col justify-center items-center gap-3">
-        <h1>Current color: {bgColor}</h1>
+        <h1>
+          Current color:{" "}
+          <span style={{ background: bgColor }} className="text-white ">
+            {bgColor}
+          </span>
+        </h1>
         <button
           onClick={() => setBgColor(randomColorGenerator)}
           className="bg-green-500 rounded-sm p-2 border-black"
